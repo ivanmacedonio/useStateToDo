@@ -1,0 +1,21 @@
+button{
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+div{
+    font-size: 40px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.Update{
+    background-color: rgb(107, 166, 244);
+    cursor: pointer;
+}
+
+.Delete{
+    background-color: rgb(242, 139, 139);
+    cursor: pointer;
+}
+
