@@ -9,23 +9,26 @@ function App() {
 
   const handleInput = ({ target }) => {
     setTitle(target.value);
+    setInputValue(target.value)
+    
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTodo = {
       id: crypto.randomUUID(),
-      title: title,
+      title: inputValue,
       completed: false,
     };
 
     const test = todos.find(item => item.title === title)
     if (test === undefined){
       setTodos([...todos, newTodo]);
+      setInputValue('')
     } else {
       alert('titulo no valido')
     }
-
+    
     
   };
 
@@ -46,7 +49,7 @@ function App() {
       <div className="todoContainer">
         <form className="todoCreateForm" onSubmit={handleSubmit}>
           <input
-            value={title}
+            value={inputValue}
             onChange={handleInput}
             className="buttonCreate"
           />
